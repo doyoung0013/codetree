@@ -1,25 +1,28 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+
+
+import java.util.*;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        // Please write your code here.
+    public static void main(String[] args)throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int a = Integer.parseInt(st.nextToken());
 
-        for (int i=0; i<n; i++){
-            for(int j=0; j<=i; j++){
+
+
+        int b=1;
+        for (int i = 0; i <a*2-1; i++) {
+            for(int j=0;j<a-Math.abs(i-a+1);j++ ){
+
                 System.out.print("* ");
             }
             System.out.println();
         }
 
-        for (int i=n-2; i>=0; i--){
-            for(int j=0; j<=i; j++){
-                System.out.print("* ");
-            }
-            System.out.println();
-        }
+
+
 
     }
 }
+
